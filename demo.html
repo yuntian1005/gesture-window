@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gesture Window · 无摄像头演示</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#101315;color:#f5f2e9;font:16px system-ui,sans-serif}
+    header{position:fixed;z-index:3;top:0;left:0;right:0;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:28px 5vw;background:linear-gradient(#101315cc,transparent)}
+    h1{font-size:20px;margin:0}header p{font-size:13px;opacity:.7;margin:6px 0}a{color:#e3f6a0;text-decoration:none}
+    #mount{position:absolute;inset:0}canvas{display:block}video{display:none}
+    footer{position:fixed;bottom:32px;left:50%;transform:translateX(-50%);z-index:3;display:flex;gap:6px;padding:8px;border-radius:18px;background:#101315d9;border:1px solid #ffffff30;backdrop-filter:blur(16px)}
+    button{cursor:pointer;border:0;border-radius:11px;padding:12px 22px;color:#fff;background:transparent;font:inherit}button[aria-pressed=true]{background:#e3f6a0;color:#171d12}
+    @media(max-width:600px){header{padding:20px}h1{font-size:17px}header p{max-width:220px;font-size:12px}button{padding:10px 16px}}
+  </style>
+</head>
+<body>
+  <header><div><h1>Gesture Window</h1><p id="status">合成画面与自动控制点 · 不使用摄像头或识别模型</p></div><a href="./">体验真实手势 ↗</a></header>
+  <video id="source" muted playsinline></video><div id="mount" aria-label="合成画面效果演示"></div>
+  <footer aria-label="效果模式"><button data-mode="invert" aria-pressed="true">反色</button><button data-mode="rainbow" aria-pressed="false">彩虹</button><button data-mode="mirror" aria-pressed="false">镜像</button></footer>
+  <script type="module" src="/src/demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "gesture-window",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "build:e2e": "vite build --config vite.e2e.config.js",
+    "preview": "vite preview",
+    "preview:e2e": "vite preview --config vite.e2e.config.js",
+    "test": "vitest run src",
+    "e2e:install": "node scripts/playwright-runner.mjs install chromium",
+    "test:e2e": "node scripts/playwright-runner.mjs test"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "^1.0.1",
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "vite": "^8.2.0",
+    "vitest": "^4.1.10"
+  },
+  "version": "1.0.0",
+  "license": "MIT"
+}

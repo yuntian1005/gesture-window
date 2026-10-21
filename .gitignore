@@ -1,0 +1,45 @@
+# Local credentials and user data
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.db
+*.db-*
+*.sqlite*
+*.log
+/data/
+**/data/
+**/workspace/
+/storage/
+/uploads/
+# Dependencies and generated files
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.next/
+.nuxt/
+.output/
+dist/
+dist-e2e/
+build/
+target/
+output/
+runs/
+coverage/
+test-results/
+playwright-report/
+.playwright-browsers/
+.npm-cache/
+*.tsbuildinfo
+# Editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
